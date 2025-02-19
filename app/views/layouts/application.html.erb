@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Link-in-bio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <title>Rodrigo Rivero's links</title>
+    <style>
+       
+    html {
+      min-height: 100%;
+    }
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+      body {
+        min-height:100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: linear-gradient(90deg, #003868, #05497d, #0a5b93, #0e6da8, #1081be, #1095d4, #0ea9ea, #0abeff);
+        color: rgba(255, 255, 255, 1.0);
+        font-family: "Trebuchet MS";
+        
+      }
 
+      .main-container{
+        max-width: 640px;
+        margin: auto;
+      }
+
+      .image-row{
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .name-row{
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: "Georgia";
+        font-size: 24px;
+        font-weight: 900;
+
+      }
+
+      .social-icons-row{
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      a{
+        color: rgba(255, 255, 255, 1.0);
+        text-decoration: none;
+      }
+
+      .link-text{
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      .item{
+        background-color: rgba(0, 56, 104, 0.31);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 1000px;
+        padding: 5px;
+        padding-right: 53px;
+        box-shadow: 4px 4px 10px 0px rgba(122,32,122,0.5)
+      }
+
+      .avatar-image {
+        width: 126.6px;
+        height: 162px;
+        border-radius:120px;
+      }
+
+      .thumbnail{
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }
+    </style>
+    </head>
   <body>
     <%= yield %>
   </body>
